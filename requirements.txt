@@ -2,3 +2,4 @@ flask
 django
 gunicorn
 django-heroku
+requests
