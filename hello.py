@@ -38,5 +38,5 @@ def sign_up():
     send_simple_message(form_data["email"])
     return "All OK"
 
-
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
