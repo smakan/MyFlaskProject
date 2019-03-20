@@ -5,13 +5,15 @@ app = Flask("MyApp")
 
 def send_simple_message(address):
     return requests.post(
-        "https://api.mailgun.net/v3/sandboxf1dac46a5a31423e8892e26c35b057e6.mailgun.org/messages",
-        auth=("api", "bcbcaafcfa6a47c6e401c7ad08aa199c-acb0b40c-2161098a"),
-        data={"from": "Excited User <mailgun@sandboxf1dac46a5a31423e8892e26c35b057e6.mailgun.org>",
+        "https://api.mailgun.net/v3/sandbox2fae016e6e294ce38e8d427233810d6d.mailgun.org/messages",
+        auth=("api", "17557645b7115460f806a045374c0315-985b58f4-a3204d0f"),
+        data={"from": "Excited User <mailgun@sandbox2fae016e6e294ce38e8d427233810d6d.mailgun.org>",
               "to": [address],
               "subject": "Subscription successful",
               "text": "Testing some Mailgun awesomness!"})
 
+#sandboxf1dac46a5a31423e8892e26c35b057e6.mailgun.org
+# "bcbcaafcfa6a47c6e401c7ad08aa199c-acb0b40c-2161098a"
 @app.route("/")
 def hello():
     return "Hello World"
